@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Filter.gd" type="Script" id=1]
+
+[node name="Filter" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 300, 280 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+
+[node name="Open" type="Label" parent="."]
+margin_right = 800.0
+margin_bottom = 14.0
+text = "["
+
+[node name="v" type="VBoxContainer" parent="."]
+margin_top = 18.0
+margin_right = 800.0
+margin_bottom = 18.0
+
+[node name="add_tag" type="Button" parent="."]
+margin_top = 22.0
+margin_right = 800.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+text = "add tag"
+
+[node name="Close" type="Label" parent="."]
+margin_top = 46.0
+margin_right = 800.0
+margin_bottom = 60.0
+text = "]"
+
+[node name="results" type="VBoxContainer" parent="."]
+margin_top = 64.0
+margin_right = 800.0
+margin_bottom = 64.0
+
+[connection signal="button_up" from="add_tag" to="." method="_on_add_tag_button_up"]

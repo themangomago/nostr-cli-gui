@@ -1,0 +1,219 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Tool.gd" type="Script" id=1]
+[ext_resource path="res://assets/Pixel-UniCode.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Tool" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 1 )
+
+[node name="v" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="toolbar" type="HBoxContainer" parent="v"]
+margin_right = 792.0
+margin_bottom = 20.0
+
+[node name="File" type="MenuButton" parent="v/toolbar"]
+margin_right = 35.0
+margin_bottom = 20.0
+text = "File"
+
+[node name="Help" type="MenuButton" parent="v/toolbar"]
+margin_left = 39.0
+margin_right = 81.0
+margin_bottom = 20.0
+focus_mode = 2
+text = "Help"
+
+[node name="HSeparator" type="HSeparator" parent="v"]
+margin_top = 24.0
+margin_right = 792.0
+margin_bottom = 28.0
+
+[node name="h" type="HSplitContainer" parent="v"]
+margin_top = 32.0
+margin_right = 792.0
+margin_bottom = 584.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="files" type="VBoxContainer" parent="v/h"]
+margin_right = 128.0
+margin_bottom = 552.0
+rect_min_size = Vector2( 0, 200 )
+
+[node name="Label" type="Label" parent="v/h/files"]
+margin_right = 128.0
+margin_bottom = 14.0
+text = "Collections"
+
+[node name="Tree" type="Tree" parent="v/h/files"]
+margin_top = 18.0
+margin_right = 128.0
+margin_bottom = 552.0
+rect_min_size = Vector2( 128, 0 )
+size_flags_vertical = 3
+
+[node name="v" type="VSplitContainer" parent="v/h"]
+margin_left = 140.0
+margin_right = 792.0
+margin_bottom = 552.0
+
+[node name="v" type="VBoxContainer" parent="v/h/v"]
+margin_right = 652.0
+margin_bottom = 480.0
+size_flags_vertical = 3
+
+[node name="relay" type="HBoxContainer" parent="v/h/v/v"]
+margin_right = 652.0
+margin_bottom = 24.0
+
+[node name="Label" type="Label" parent="v/h/v/v/relay"]
+margin_top = 5.0
+margin_right = 64.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 64, 0 )
+text = "relay"
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="v/h/v/v/relay"]
+margin_left = 68.0
+margin_right = 550.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+size_flags_horizontal = 3
+text = "ws://127.0.0.1:8080"
+
+[node name="SendButton" type="Button" parent="v/h/v/v/relay"]
+margin_left = 554.0
+margin_right = 652.0
+margin_bottom = 24.0
+text = "Send to Relay"
+
+[node name="priv" type="HBoxContainer" parent="v/h/v/v"]
+margin_top = 28.0
+margin_right = 652.0
+margin_bottom = 52.0
+
+[node name="Label" type="Label" parent="v/h/v/v/priv"]
+margin_top = 5.0
+margin_right = 64.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 64, 0 )
+text = "privkey"
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="v/h/v/v/priv"]
+margin_left = 68.0
+margin_right = 577.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+size_flags_horizontal = 3
+text = "ad48bb614ce082d4786d616db9b6379d03304eff2fbfab7f732681de59e9363c"
+
+[node name="GenKey" type="Button" parent="v/h/v/v/priv"]
+margin_left = 581.0
+margin_right = 652.0
+margin_bottom = 24.0
+text = "Generate"
+
+[node name="sep" type="HSeparator" parent="v/h/v/v"]
+margin_top = 56.0
+margin_right = 652.0
+margin_bottom = 60.0
+
+[node name="toolbuttons" type="HBoxContainer" parent="v/h/v/v"]
+margin_top = 64.0
+margin_right = 652.0
+margin_bottom = 84.0
+
+[node name="TypeLabel" type="Label" parent="v/h/v/v/toolbuttons"]
+margin_top = 3.0
+margin_right = 64.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 64, 0 )
+text = "Type"
+valign = 1
+
+[node name="TypeOption" type="OptionButton" parent="v/h/v/v/toolbuttons"]
+margin_left = 68.0
+margin_right = 284.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 16 )
+size_flags_horizontal = 3
+
+[node name="TemplateLabel" type="Label" parent="v/h/v/v/toolbuttons"]
+margin_left = 288.0
+margin_top = 3.0
+margin_right = 352.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 64, 0 )
+text = "Template"
+valign = 1
+
+[node name="TemplateOption" type="OptionButton" parent="v/h/v/v/toolbuttons"]
+margin_left = 356.0
+margin_right = 572.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 16 )
+size_flags_horizontal = 3
+
+[node name="SaveButton" type="Button" parent="v/h/v/v/toolbuttons"]
+margin_left = 576.0
+margin_right = 652.0
+margin_bottom = 20.0
+text = "Save JSON"
+
+[node name="sep2" type="HSeparator" parent="v/h/v/v"]
+margin_top = 88.0
+margin_right = 652.0
+margin_bottom = 92.0
+
+[node name="scroll" type="ScrollContainer" parent="v/h/v/v"]
+margin_top = 96.0
+margin_right = 652.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 0, 64 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="v" type="VBoxContainer" parent="v/h/v/v/scroll"]
+margin_right = 652.0
+margin_bottom = 384.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Log" type="RichTextLabel" parent="v/h/v"]
+margin_top = 492.0
+margin_right = 652.0
+margin_bottom = 552.0
+rect_min_size = Vector2( 0, 60 )
+custom_fonts/normal_font = SubResource( 1 )
+scroll_following = true
+
+[node name="ColorRect" type="Panel" parent="v/h/v/Log"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = -2.0
+margin_right = 2.0
+margin_bottom = 2.0
+
+[connection signal="button_up" from="v/h/v/v/relay/SendButton" to="." method="_on_SendButton_button_up"]
+[connection signal="button_up" from="v/h/v/v/priv/GenKey" to="." method="_on_SendButton_button_up"]
+[connection signal="item_selected" from="v/h/v/v/toolbuttons/TypeOption" to="." method="_on_TypeOption_item_selected"]
+[connection signal="item_selected" from="v/h/v/v/toolbuttons/TemplateOption" to="." method="_on_TemplateOption_item_selected"]
+[connection signal="button_up" from="v/h/v/v/toolbuttons/SaveButton" to="." method="_on_SaveButton_button_up"]

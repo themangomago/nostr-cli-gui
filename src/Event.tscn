@@ -1,0 +1,208 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Event.gd" type="Script" id=1]
+
+[node name="Event" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 300, 280 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+
+[node name="id" type="HBoxContainer" parent="."]
+margin_right = 800.0
+margin_bottom = 24.0
+
+[node name="Label" type="Label" parent="id"]
+margin_right = 64.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 64, 24 )
+text = "id*"
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="id"]
+margin_left = 68.0
+margin_right = 800.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+size_flags_horizontal = 3
+text = "0"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="pubkey" type="HBoxContainer" parent="."]
+margin_top = 28.0
+margin_right = 800.0
+margin_bottom = 52.0
+
+[node name="Label" type="Label" parent="pubkey"]
+margin_right = 64.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 64, 24 )
+text = "pubkey*"
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="pubkey"]
+margin_left = 68.0
+margin_right = 800.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+size_flags_horizontal = 3
+text = "0"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="created_at" type="HBoxContainer" parent="."]
+margin_top = 56.0
+margin_right = 800.0
+margin_bottom = 80.0
+
+[node name="Label" type="Label" parent="created_at"]
+margin_right = 64.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 64, 24 )
+text = "created*"
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="created_at"]
+margin_left = 68.0
+margin_right = 800.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+size_flags_horizontal = 3
+text = "0"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="kind" type="HBoxContainer" parent="."]
+margin_top = 84.0
+margin_right = 800.0
+margin_bottom = 108.0
+
+[node name="Label" type="Label" parent="kind"]
+margin_right = 64.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 64, 24 )
+text = "kind"
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="kind"]
+margin_left = 68.0
+margin_right = 800.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+size_flags_horizontal = 3
+text = "0"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="tags" type="HBoxContainer" parent="."]
+margin_top = 112.0
+margin_right = 800.0
+margin_bottom = 172.0
+
+[node name="Label" type="Label" parent="tags"]
+margin_top = 18.0
+margin_right = 64.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 64, 24 )
+text = "tags"
+valign = 1
+
+[node name="v" type="VBoxContainer" parent="tags"]
+margin_left = 68.0
+margin_right = 800.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+
+[node name="open" type="Label" parent="tags/v"]
+margin_right = 732.0
+margin_bottom = 14.0
+text = "["
+
+[node name="v" type="VBoxContainer" parent="tags/v"]
+margin_top = 18.0
+margin_right = 732.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+
+[node name="add_tag" type="Button" parent="tags/v"]
+margin_top = 22.0
+margin_right = 732.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+text = "add tag"
+
+[node name="close" type="Label" parent="tags/v"]
+margin_top = 46.0
+margin_right = 732.0
+margin_bottom = 60.0
+text = "]"
+
+[node name="content" type="HBoxContainer" parent="."]
+margin_top = 176.0
+margin_right = 800.0
+margin_bottom = 248.0
+
+[node name="Label" type="Label" parent="content"]
+margin_top = 24.0
+margin_right = 64.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 64, 24 )
+text = "content"
+valign = 1
+
+[node name="LineEdit" type="TextEdit" parent="content"]
+margin_left = 68.0
+margin_right = 800.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 0, 72 )
+size_flags_horizontal = 3
+show_line_numbers = true
+
+[node name="sig" type="HBoxContainer" parent="."]
+margin_top = 252.0
+margin_right = 800.0
+margin_bottom = 276.0
+
+[node name="Label" type="Label" parent="sig"]
+margin_right = 64.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 64, 24 )
+text = "sig*"
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="sig"]
+margin_left = 68.0
+margin_right = 800.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+size_flags_horizontal = 3
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="tools" type="HBoxContainer" parent="."]
+margin_top = 280.0
+margin_right = 800.0
+margin_bottom = 300.0
+
+[node name="spacer" type="Control" parent="tools"]
+margin_right = 702.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Copy" type="Button" parent="tools"]
+margin_left = 706.0
+margin_right = 749.0
+margin_bottom = 20.0
+text = "Copy"
+
+[node name="Paste" type="Button" parent="tools"]
+margin_left = 753.0
+margin_right = 800.0
+margin_bottom = 20.0
+text = "Paste"
+
+[connection signal="button_up" from="tags/v/add_tag" to="." method="_on_add_tag_button_up"]
