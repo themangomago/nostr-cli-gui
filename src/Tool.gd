@@ -1,5 +1,7 @@
 extends Control
 
+const executables = ["./nostrcli", "nostrcli.exe"]
+var os_id = 0
 
 var Event = preload("res://src/Event.tscn")
 var Filter = preload("res://src/Filter.tscn")
@@ -26,6 +28,9 @@ var current_event: Dictionary = event_template.duplicate(true)
 var result_event: Array = []
 
 func _ready():
+	if OS.get_name() == "Windows":
+		os_id = 1
+	
 	Global.logWindow = $v/h/v/Log
 
 	var tree = $v/h/files/Tree
@@ -200,8 +205,15 @@ func getEventsFromResult(output):
 
 func nostrcli(params: Array) -> Array:
 	var output = []
+	
+	var string = ""
+	for param in params:
+		string += param + " "
 
-	OS.execute('nostrcli2', params, true, output, true )
+	Global.add_log("Calling: nostrcli " + string)
+	var result = OS.execute(executables[os_id], params, true, output, true )
+	print(output)
+	print(result)
 	return output
 
 

@@ -196,21 +196,16 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Log" type="RichTextLabel" parent="v/h/v"]
-margin_top = 492.0
-margin_right = 652.0
-margin_bottom = 552.0
-rect_min_size = Vector2( 0, 60 )
-custom_fonts/normal_font = SubResource( 1 )
-scroll_following = true
-
-[node name="ColorRect" type="Panel" parent="v/h/v/Log"]
-show_behind_parent = true
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2.0
-margin_top = -2.0
-margin_right = 2.0
-margin_bottom = 2.0
+margin_top = -80.0
+rect_min_size = Vector2( 0, 60 )
+focus_mode = 2
+custom_fonts/normal_font = SubResource( 1 )
+scroll_following = true
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
 
 [connection signal="button_up" from="v/h/v/v/relay/SendButton" to="." method="_on_SendButton_button_up"]
 [connection signal="button_up" from="v/h/v/v/priv/GenKey" to="." method="_on_SendButton_button_up"]

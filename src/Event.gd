@@ -34,7 +34,11 @@ func setup(event, _read_only = false):
 		$kind/LineEdit.editable = false
 		$content/LineEdit.readonly = true
 		$sig/LineEdit.editable = false
-		$tools/Paste.disabled = true
+		$tools/Paste.hide()
+	else:
+		$tools/Copy.hide()
+
+
 
 
 func get_event():
@@ -56,3 +60,19 @@ func get_event():
 func _on_add_tag_button_up():
 	var new = Tag.instance()
 	$tags/v/v.add_child(new)
+
+
+func _on_Copy_button_up():
+	var event = get_event()
+	var event_string = to_json(event)
+	OS.set_clipboard(event_string)
+
+
+func _on_Paste_button_up():
+	var content = OS.get_clipboard()
+	var json = JSON.parse(content)
+	if json.error == 0:
+		var result = json.result
+		if result.has("id") and result.has("pubkey") and result.has("created_at") and result.has("kind") and result.has("tags") and result.has("content") and result.has("sig"):
+			setup(result)
+

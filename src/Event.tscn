@@ -206,3 +206,5 @@ margin_bottom = 20.0
 text = "Paste"
 
 [connection signal="button_up" from="tags/v/add_tag" to="." method="_on_add_tag_button_up"]
+[connection signal="button_up" from="tools/Copy" to="." method="_on_Copy_button_up"]
+[connection signal="button_up" from="tools/Paste" to="." method="_on_Paste_button_up"]

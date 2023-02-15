@@ -13,3 +13,5 @@ func set_content(text, read_only = false):
 
 func _on_Button_button_up():
 	queue_free()
+
+
