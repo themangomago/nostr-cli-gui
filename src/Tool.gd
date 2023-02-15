@@ -162,10 +162,12 @@ func _on_SendButton_button_up():
 				"-k=\"" + $v/h/v/v/priv/LineEdit.text + "\""
 			]
 			var output = nostrcli(params)
-
-#			for line in output:
-#				$v/scroll/v/Log.text += "> " + line
-#				print(line)
+			
+			if output.find("Event published.") != -1:
+				Global.add_log("Published.")
+			else:
+				Global.add_log("Error publishing check logs.")
+				print(output)
 
 		else:
 			var filter = child.get_filter()
@@ -194,12 +196,13 @@ func getEventsFromResult(output):
 			var text = fh.get_as_text()
 			var json = JSON.parse(text)
 			if json.error == OK:
+				Global.add_log("Events received.")
 				return json.result
 			else:
-				Global.add_log("error: Paring results.json")
+				Global.add_log("Error paring results.json")
 
 		else:
-			Global.add_log("nostrcli error: results.json not generated.")
+			Global.add_log("nostrcli error the results.json not generated.")
 	return null
 
 
