@@ -196,10 +196,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Log" type="RichTextLabel" parent="v/h/v"]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -80.0
+margin_top = 492.0
+margin_right = 652.0
+margin_bottom = 552.0
 rect_min_size = Vector2( 0, 60 )
 focus_mode = 2
 custom_fonts/normal_font = SubResource( 1 )

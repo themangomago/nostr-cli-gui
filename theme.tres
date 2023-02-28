@@ -1,0 +1,129 @@
+[gd_resource type="Theme" load_steps=13 format=2]
+
+[sub_resource type="StyleBoxFlat" id=9]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.682353, 0.407843, 0.988235, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxFlat" id=8]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.796078, 0.607843, 1, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.752941, 0.537255, 0.984314, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=13]
+content_margin_top = 1.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.164706, 0.164706, 0.164706, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_bottom = 2
+border_color = Color( 0.752941, 0.537255, 0.984314, 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.184314, 0.184314, 0.184314, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 2
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.156863, 0.156863, 0.156863, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 2
+
+[sub_resource type="StyleBoxFlat" id=12]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.188235, 0.188235, 0.188235, 1 )
+border_width_bottom = 2
+border_color = Color( 0.752941, 0.537255, 0.984314, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_bottom = 2
+border_color = Color( 0.752941, 0.537255, 0.984314, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.184314, 0.184314, 0.184314, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.156863, 0.156863, 0.156863, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[resource]
+Button/colors/font_color = Color( 1, 1, 1, 1 )
+Button/colors/font_color_focus = Color( 1, 1, 1, 1 )
+Button/colors/font_color_hover = Color( 1, 1, 1, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/styles/disabled = SubResource( 9 )
+Button/styles/focus = SubResource( 10 )
+Button/styles/hover = SubResource( 8 )
+Button/styles/normal = SubResource( 7 )
+Button/styles/pressed = SubResource( 8 )
+HSeparator/styles/separator = SubResource( 13 )
+LineEdit/styles/focus = SubResource( 3 )
+LineEdit/styles/normal = SubResource( 1 )
+LineEdit/styles/read_only = SubResource( 2 )
+PopupMenu/styles/panel = SubResource( 12 )
+TextEdit/styles/focus = SubResource( 6 )
+TextEdit/styles/normal = SubResource( 4 )
+TextEdit/styles/read_only = SubResource( 5 )
