@@ -30,8 +30,10 @@ var result_event: Array = []
 func _ready():
 	if OS.get_name() == "Windows":
 		os_id = 1
-	
+
 	Global.logWindow = $v/h/v/Log
+
+	setup_toolbar()
 
 	var tree = $v/h/files/Tree
 	var root = tree.create_item()
@@ -77,6 +79,26 @@ func switch_view(index):
 		$v/h/v/v/scroll/v.add_child(event)
 		event.setup(current_event)
 
+func setup_toolbar():
+	var popup = $v/toolbar/File.get_popup()
+	popup.add_item("Quit")
+	popup.connect("id_pressed", self, "_file_item_pressed")
+
+	popup = $v/toolbar/Help.get_popup()
+	popup.add_item("Version")
+	popup.add_item("Help")
+	popup.connect("id_pressed", self, "_help_item_pressed")
+
+
+func _file_item_pressed(id):
+	if id == 0:
+		get_tree().quit()
+
+func _help_item_pressed(id):
+	if id == 0:
+		Global.add_log("Version: " + str(Global.VERSION))
+	elif id == 1:
+		OS.shell_open("https://github.com/themangomago/nostr-cli-gui")
 
 
 func remove_events(index):
@@ -162,7 +184,7 @@ func _on_SendButton_button_up():
 				"-k=\"" + $v/h/v/v/priv/LineEdit.text + "\""
 			]
 			var output = nostrcli(params)
-			
+
 			if output.find("Event published.") != -1:
 				Global.add_log("Published.")
 			else:
@@ -185,7 +207,8 @@ func _on_SendButton_button_up():
 			]
 			var output = nostrcli(params)
 			var events = getEventsFromResult(output)
-			child.show_results(events)
+			if events:
+				child.show_results(events)
 
 
 func getEventsFromResult(output):
@@ -208,7 +231,7 @@ func getEventsFromResult(output):
 
 func nostrcli(params: Array) -> Array:
 	var output = []
-	
+
 	var string = ""
 	for param in params:
 		string += param + " "

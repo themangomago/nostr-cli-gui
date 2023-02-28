@@ -100,12 +100,12 @@ caret_blink_speed = 0.5
 [node name="tags" type="HBoxContainer" parent="."]
 margin_top = 112.0
 margin_right = 800.0
-margin_bottom = 172.0
+margin_bottom = 170.0
 
 [node name="Label" type="Label" parent="tags"]
-margin_top = 18.0
+margin_top = 17.0
 margin_right = 64.0
-margin_bottom = 42.0
+margin_bottom = 41.0
 rect_min_size = Vector2( 64, 24 )
 text = "tags"
 valign = 1
@@ -113,7 +113,7 @@ valign = 1
 [node name="v" type="VBoxContainer" parent="tags"]
 margin_left = 68.0
 margin_right = 800.0
-margin_bottom = 60.0
+margin_bottom = 58.0
 size_flags_horizontal = 3
 
 [node name="open" type="Label" parent="tags/v"]
@@ -130,20 +130,20 @@ size_flags_horizontal = 3
 [node name="add_tag" type="Button" parent="tags/v"]
 margin_top = 22.0
 margin_right = 732.0
-margin_bottom = 42.0
+margin_bottom = 40.0
 size_flags_horizontal = 3
 text = "add tag"
 
 [node name="close" type="Label" parent="tags/v"]
-margin_top = 46.0
+margin_top = 44.0
 margin_right = 732.0
-margin_bottom = 60.0
+margin_bottom = 58.0
 text = "]"
 
 [node name="content" type="HBoxContainer" parent="."]
-margin_top = 176.0
+margin_top = 174.0
 margin_right = 800.0
-margin_bottom = 248.0
+margin_bottom = 246.0
 
 [node name="Label" type="Label" parent="content"]
 margin_top = 24.0
@@ -162,9 +162,9 @@ size_flags_horizontal = 3
 show_line_numbers = true
 
 [node name="sig" type="HBoxContainer" parent="."]
-margin_top = 252.0
+margin_top = 250.0
 margin_right = 800.0
-margin_bottom = 276.0
+margin_bottom = 274.0
 
 [node name="Label" type="Label" parent="sig"]
 margin_right = 64.0
@@ -183,26 +183,26 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="tools" type="HBoxContainer" parent="."]
-margin_top = 280.0
+margin_top = 278.0
 margin_right = 800.0
-margin_bottom = 300.0
+margin_bottom = 296.0
 
 [node name="spacer" type="Control" parent="tools"]
-margin_right = 702.0
-margin_bottom = 20.0
+margin_right = 718.0
+margin_bottom = 18.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Copy" type="Button" parent="tools"]
-margin_left = 706.0
-margin_right = 749.0
-margin_bottom = 20.0
+margin_left = 722.0
+margin_right = 757.0
+margin_bottom = 18.0
 text = "Copy"
 
 [node name="Paste" type="Button" parent="tools"]
-margin_left = 753.0
+margin_left = 761.0
 margin_right = 800.0
-margin_bottom = 20.0
+margin_bottom = 18.0
 text = "Paste"
 
 [connection signal="button_up" from="tags/v/add_tag" to="." method="_on_add_tag_button_up"]

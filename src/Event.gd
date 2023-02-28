@@ -66,6 +66,7 @@ func _on_Copy_button_up():
 	var event = get_event()
 	var event_string = to_json(event)
 	OS.set_clipboard(event_string)
+	Global.add_log("Event copied..")
 
 
 func _on_Paste_button_up():
@@ -75,4 +76,5 @@ func _on_Paste_button_up():
 		var result = json.result
 		if result.has("id") and result.has("pubkey") and result.has("created_at") and result.has("kind") and result.has("tags") and result.has("content") and result.has("sig"):
 			setup(result)
+			Global.add_log("Event pasted..")
 

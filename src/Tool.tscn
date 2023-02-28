@@ -23,35 +23,36 @@ anchor_bottom = 1.0
 
 [node name="toolbar" type="HBoxContainer" parent="v"]
 margin_right = 792.0
-margin_bottom = 20.0
+margin_bottom = 18.0
 
 [node name="File" type="MenuButton" parent="v/toolbar"]
-margin_right = 35.0
-margin_bottom = 20.0
+margin_right = 27.0
+margin_bottom = 18.0
 text = "File"
 
 [node name="Help" type="MenuButton" parent="v/toolbar"]
-margin_left = 39.0
-margin_right = 81.0
-margin_bottom = 20.0
+margin_left = 31.0
+margin_right = 65.0
+margin_bottom = 18.0
 focus_mode = 2
 text = "Help"
 
 [node name="HSeparator" type="HSeparator" parent="v"]
-margin_top = 24.0
+margin_top = 22.0
 margin_right = 792.0
-margin_bottom = 28.0
+margin_bottom = 26.0
 
 [node name="h" type="HSplitContainer" parent="v"]
-margin_top = 32.0
+margin_top = 30.0
 margin_right = 792.0
 margin_bottom = 584.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="files" type="VBoxContainer" parent="v/h"]
+visible = false
 margin_right = 128.0
-margin_bottom = 552.0
+margin_bottom = 554.0
 rect_min_size = Vector2( 0, 200 )
 
 [node name="Label" type="Label" parent="v/h/files"]
@@ -62,22 +63,21 @@ text = "Collections"
 [node name="Tree" type="Tree" parent="v/h/files"]
 margin_top = 18.0
 margin_right = 128.0
-margin_bottom = 552.0
+margin_bottom = 554.0
 rect_min_size = Vector2( 128, 0 )
 size_flags_vertical = 3
 
 [node name="v" type="VSplitContainer" parent="v/h"]
-margin_left = 140.0
 margin_right = 792.0
-margin_bottom = 552.0
+margin_bottom = 554.0
 
 [node name="v" type="VBoxContainer" parent="v/h/v"]
-margin_right = 652.0
-margin_bottom = 480.0
+margin_right = 792.0
+margin_bottom = 482.0
 size_flags_vertical = 3
 
 [node name="relay" type="HBoxContainer" parent="v/h/v/v"]
-margin_right = 652.0
+margin_right = 792.0
 margin_bottom = 24.0
 
 [node name="Label" type="Label" parent="v/h/v/v/relay"]
@@ -90,21 +90,21 @@ valign = 1
 
 [node name="LineEdit" type="LineEdit" parent="v/h/v/v/relay"]
 margin_left = 68.0
-margin_right = 550.0
+margin_right = 698.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 0, 24 )
 size_flags_horizontal = 3
 text = "ws://127.0.0.1:8080"
 
 [node name="SendButton" type="Button" parent="v/h/v/v/relay"]
-margin_left = 554.0
-margin_right = 652.0
+margin_left = 702.0
+margin_right = 792.0
 margin_bottom = 24.0
 text = "Send to Relay"
 
 [node name="priv" type="HBoxContainer" parent="v/h/v/v"]
 margin_top = 28.0
-margin_right = 652.0
+margin_right = 792.0
 margin_bottom = 52.0
 
 [node name="Label" type="Label" parent="v/h/v/v/priv"]
@@ -117,88 +117,88 @@ valign = 1
 
 [node name="LineEdit" type="LineEdit" parent="v/h/v/v/priv"]
 margin_left = 68.0
-margin_right = 577.0
+margin_right = 725.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 0, 24 )
 size_flags_horizontal = 3
 text = "ad48bb614ce082d4786d616db9b6379d03304eff2fbfab7f732681de59e9363c"
 
 [node name="GenKey" type="Button" parent="v/h/v/v/priv"]
-margin_left = 581.0
-margin_right = 652.0
+margin_left = 729.0
+margin_right = 792.0
 margin_bottom = 24.0
 text = "Generate"
 
 [node name="sep" type="HSeparator" parent="v/h/v/v"]
 margin_top = 56.0
-margin_right = 652.0
+margin_right = 792.0
 margin_bottom = 60.0
 
 [node name="toolbuttons" type="HBoxContainer" parent="v/h/v/v"]
 margin_top = 64.0
-margin_right = 652.0
-margin_bottom = 84.0
+margin_right = 792.0
+margin_bottom = 82.0
 
 [node name="TypeLabel" type="Label" parent="v/h/v/v/toolbuttons"]
-margin_top = 3.0
+margin_top = 2.0
 margin_right = 64.0
-margin_bottom = 17.0
+margin_bottom = 16.0
 rect_min_size = Vector2( 64, 0 )
 text = "Type"
 valign = 1
 
 [node name="TypeOption" type="OptionButton" parent="v/h/v/v/toolbuttons"]
 margin_left = 68.0
-margin_right = 284.0
-margin_bottom = 20.0
+margin_right = 358.0
+margin_bottom = 18.0
 rect_min_size = Vector2( 0, 16 )
 size_flags_horizontal = 3
 
 [node name="TemplateLabel" type="Label" parent="v/h/v/v/toolbuttons"]
-margin_left = 288.0
-margin_top = 3.0
-margin_right = 352.0
-margin_bottom = 17.0
+margin_left = 362.0
+margin_top = 2.0
+margin_right = 426.0
+margin_bottom = 16.0
 rect_min_size = Vector2( 64, 0 )
 text = "Template"
 valign = 1
 
 [node name="TemplateOption" type="OptionButton" parent="v/h/v/v/toolbuttons"]
-margin_left = 356.0
-margin_right = 572.0
-margin_bottom = 20.0
+margin_left = 430.0
+margin_right = 720.0
+margin_bottom = 18.0
 rect_min_size = Vector2( 0, 16 )
 size_flags_horizontal = 3
 
 [node name="SaveButton" type="Button" parent="v/h/v/v/toolbuttons"]
-margin_left = 576.0
-margin_right = 652.0
-margin_bottom = 20.0
+margin_left = 724.0
+margin_right = 792.0
+margin_bottom = 18.0
 text = "Save JSON"
 
 [node name="sep2" type="HSeparator" parent="v/h/v/v"]
-margin_top = 88.0
-margin_right = 652.0
-margin_bottom = 92.0
+margin_top = 86.0
+margin_right = 792.0
+margin_bottom = 90.0
 
 [node name="scroll" type="ScrollContainer" parent="v/h/v/v"]
-margin_top = 96.0
-margin_right = 652.0
-margin_bottom = 480.0
+margin_top = 94.0
+margin_right = 792.0
+margin_bottom = 482.0
 rect_min_size = Vector2( 0, 64 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="v" type="VBoxContainer" parent="v/h/v/v/scroll"]
-margin_right = 652.0
-margin_bottom = 384.0
+margin_right = 792.0
+margin_bottom = 388.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Log" type="RichTextLabel" parent="v/h/v"]
-margin_top = 492.0
-margin_right = 652.0
-margin_bottom = 552.0
+margin_top = 494.0
+margin_right = 792.0
+margin_bottom = 554.0
 rect_min_size = Vector2( 0, 60 )
 focus_mode = 2
 custom_fonts/normal_font = SubResource( 1 )
