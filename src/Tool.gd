@@ -185,7 +185,7 @@ func _on_SendButton_button_up():
 			]
 			var output = nostrcli(params)
 
-			if output.find("Event published.") != -1:
+			if output[0].find("Event published.") != -1:
 				Global.add_log("Published.")
 			else:
 				Global.add_log("Error publishing check logs.")
@@ -200,15 +200,22 @@ func _on_SendButton_button_up():
 			save("filter.json", filter)
 
 			var params = [
-				 "-f=\"filter.json\"",
+				"-f=\"filter.json\"",
 				"-t=\"req\"",
 				"-r=\"" + $v/h/v/v/relay/LineEdit.text + "\"",
 				"-o=\"results.json\""
 			]
 			var output = nostrcli(params)
-			var events = getEventsFromResult(output)
-			if events:
-				child.show_results(events)
+			if output[0].find("-[NostrCli]") != -1:
+				var events = getEventsFromResult(output)
+				if events:
+					child.show_results(events)
+			else:
+				Global.add_log("Error getting results.")
+				print(output)
+
+
+
 
 
 func getEventsFromResult(output):
@@ -238,6 +245,7 @@ func nostrcli(params: Array) -> Array:
 
 	Global.add_log("Calling: nostrcli " + string)
 	var result = OS.execute(executables[os_id], params, true, output, true )
+	print("Output: ")
 	print(output)
 	print(result)
 	return output
